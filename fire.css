@@ -1,15 +1,14 @@
 .dew-diy {
   --dew-shift: filter 33ms;
-  --dew-solar: violet;
-  --dew-lunar: indigo;
+  /* --dew-solar: orangered; */
+  --dew-solar: #ed3;
+  --dew-lunar: #020202;
   --dew-hover: hue-rotate(-30deg);
 }
 
-@media (prefers-contrast: more) {
-  .dew-diy {
-    --dew-solar: mistyrose;
-    --dew-lunar: indigo;
-  }
+::selection {
+  color: var(--dew-oil);
+  background: var(--dew-ink);
 }
 
 :link {
@@ -58,8 +57,8 @@ body {
 @media (orientation: landscape) {
   body {
     border-radius: 100%;
-    filter: hue-rotate(-90deg);
-    transform: rotate(90deg);
+    /* filter: hue-rotate(-90deg); */
+    /* transform: rotate(90deg); */
   }
 }
 
@@ -67,4 +66,18 @@ body {
   [class] {
     transition: none;
   }
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-bottom-color: violet;
+  border-style: solid;
+  border-top: none;
+  border-width: 38vw;
+}
+
+[hidden] {
+  display: none;
 }
